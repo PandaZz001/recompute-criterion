@@ -21,9 +21,13 @@ applied automatically; see
 
 ## Argo / WOA23
 
-Second-environment validation currently uses synthetic literature
-waveguides (W1). Real Argo/WOA ingestion is pending a reachable channel
-(see derivation manuscript ch. 19.5 for the mirror checklist).
+- WOA23 seasonal climatological SSP (quarterly `woa23_ssp_s13..16.nc`,
+  0.25° global, 102 standard levels, m/s) + ETOPO2022 bathymetry:
+  real second-environment validation (experiments/W2_woa_env.py).
+  Configure `WOA23_DIR` to the folder containing the SSP files and
+  `Etopo2022_Little/ETOPO_2022_v1_60s.nc`.
+- Argo float profiles: still pending a reachable GDAC channel (see
+  derivation manuscript ch. 19.5 mirror checklist).
 
 ## Acoustics Toolbox
 
