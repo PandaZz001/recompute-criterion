@@ -44,8 +44,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 WORK = os.path.join(HERE, "work")
 W2W = os.path.join(WORK, "w2")
 FIG = os.path.join(HERE, "figures")
-KEXE = r"D:\0_Research\toolbox\Acoustics-Toolbox\Kraken\kraken.exe"
-FEXE = r"D:\0_Research\toolbox\Acoustics-Toolbox\KrakenField\field.exe"
+KEXE = os.environ.get(
+    "KRAKEN_EXE",
+    r"D:\0_Research\toolbox\Acoustics-Toolbox\Kraken\kraken.exe")
+FEXE = os.environ.get(
+    "KRAKEN_FIELD_EXE",
+    r"D:\0_Research\toolbox\Acoustics-Toolbox\KrakenField\field.exe")
 NAVY, TEAL, ORANGE, RED = "#1F3A5F", "#2A9D8F", "#E86A17", "#C12C2C"
 os.makedirs(W2W, exist_ok=True)
 
